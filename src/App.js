@@ -20,11 +20,12 @@ export default function App() {
     setItems((items) => items.filter((item) => item.id !== id));
   }
   function handleToggleItem(id) {
+    console.log("ID: ", id);
     setItems((items) =>
       items.map((item) =>
         item.id === id ? { ...item, packed: !item.packed } : item
       )
-    );
+    ); 
   }
   function handleClearList() {
     const confirmed = window.confirm("Are you SURE to DELETE the LIST?");
